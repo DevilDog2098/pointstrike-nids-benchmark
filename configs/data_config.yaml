@@ -1,0 +1,50 @@
+project_name: pointstrike_nids_benchmark
+random_seed: 42
+
+dataset:
+  name: UNSW-NB15
+  task_type: binary_classification
+  target_column: Label
+  attack_category_column: attack_cat
+  raw_data_dir: data/raw
+  interim_data_dir: data/interim
+  processed_data_dir: data/processed
+  file_pattern: "*.csv"
+
+splits:
+  train_size: 0.70
+  val_size: 0.15
+  test_size: 0.15
+  stratify: true
+
+feature_policy:
+  excluded_features:
+    - srcip
+    - dstip
+    - attack_cat
+    - Label
+    - Stime
+    - Ltime
+    - stcpb
+    - dtcpb
+  categorical_features:
+    - proto
+    - state
+    - service
+  binary_passthrough_features:
+    - is_sm_ips_ports
+    - is_ftp_login
+  numeric_imputer_strategy: median
+  categorical_imputer_strategy: most_frequent
+  scaler_for_models:
+    - logistic_regression
+    - svm
+    - mlp
+  unscaled_models:
+    - random_forest
+    - xgboost
+    - gradient_boosting
+
+artifacts:
+  split_metadata_path: outputs/logs/split_metadata.json
+  feature_manifest_path: outputs/logs/feature_manifest.json

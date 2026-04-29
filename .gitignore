@@ -1,0 +1,38 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build and packaging
+build/
+dist/
+*.egg-info/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Project outputs
+outputs/models/
+outputs/metrics/
+outputs/figures/
+outputs/logs/
+
+# Data directories
+data/
+
+# Local environment/config files
+.env
+
+# PDF and Word temp files
+~$*.docx

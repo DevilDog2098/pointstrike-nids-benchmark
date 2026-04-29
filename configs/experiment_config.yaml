@@ -1,0 +1,35 @@
+experiment_defaults:
+  selection_metric_priority:
+    - recall
+    - false_positive_rate
+    - precision
+    - f1
+    - roc_auc
+    - inference_time_seconds
+    - training_time_seconds
+  log_dir: outputs/logs
+  metrics_dir: outputs/metrics
+  model_dir: outputs/models
+  figure_dir: outputs/figures
+
+experiments:
+  exp_001:
+    id: EXP-001
+    model_key: logistic_regression
+    description: Planned baseline linear benchmark
+  exp_002:
+    id: EXP-002
+    model_key: random_forest
+    description: Planned nonlinear tree baseline
+  exp_003:
+    id: EXP-003
+    model_key: xgboost
+    description: Planned boosted-tree benchmark
+  exp_004:
+    id: EXP-004
+    model_key: svm
+    description: Planned margin-based baseline subject to runtime feasibility
+  exp_005:
+    id: EXP-005
+    model_key: mlp
+    description: Planned lightweight neural baseline
