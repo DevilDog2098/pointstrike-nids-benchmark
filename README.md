@@ -83,3 +83,10 @@ This repository is intended to accompany the manuscript:
 **Reproducible Evaluation of Machine Learning Models for Network Intrusion Detection: False-Positive Burden and Cross-Dataset Generalization**
 
 It provides the code and configuration workflow used for the reported experiments, while excluding raw datasets and large generated artifacts from version control.
+
+## Paper / Preprint
+
+The research paper associated with this repository is available on PointStrike Digital:
+
+**Reproducible Evaluation of Machine Learning Models for Network Intrusion Detection: False-Positive Burden and Cross-Dataset Generalization**  
+[View the paper on PointStrike Digital]([https://pointstrikedigital.com/YOUR-PAGE-SLUG/](https://www.pointstrikedigital.com/reproducible-evaluation-of-machine-learning-models-for-network-intrusion-detection-false-positive-burden-and-cross-dataset-generalization/))
